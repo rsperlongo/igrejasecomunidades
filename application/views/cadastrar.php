@@ -138,7 +138,7 @@
             </div><!-- /.row -->
             <?php 
             echo validation_errors();
-            echo form_open(base_url('adicionar/cadastrar'), array('id'=>'form_cadastro', 'class'=>'form-submit', 'role'=>'form')) . 
+            echo form_open(base_url('cadastrar/adicionar'), array('id'=>'form_cadastro', 'class'=>'form-submit', 'role'=>'form')) . 
             "<div class='row'>" . 
                "<div class='block'>" . 
                     "<div class='col-md-9 col-sm-9'>" . 
@@ -149,9 +149,9 @@
                                         "<div class='col-md-12'>" . 
                                             "<div class='form-group'>" . 
                                                 "<div id='the-basics'>" . 
-                                                    form_label('Denominação','denominacao') . 
-                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao','type'=>'text','placeholder'=>'Denominacao','Value'=>set_value('denominacao'))) . 
-                                                "</div>" .  
+                                                    form_label('Denominação','denominacao') . "&nbsp;" . "&nbsp;" . 
+                                                    form_input(array('class'=>'typeahead','id'=>'denominacao_ID','name'=>'denominacao_ID','type'=>'text','placeholder'=>'Denominacao','Value'=>set_value('denominacao'))) . 
+                                                "</div>" .  "<br>" . "<br>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('Nome da Igreja','nome') . 
                                                     form_input(array('class'=>'form-control','id'=>'nome','name'=>'nome','type'=>'text','placeholder'=>'Nome da Igreja','Value'=>set_value('nome'))) . 
@@ -163,7 +163,7 @@
                                                 "</div>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('Endereço','rua') .
-                                                    form_input(array('class'=>'form-control','id'=>'rua','name'=>'rua','type'=>'text','placeholder'=>'Endereço','Value'=>set_value('rua'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'rua','name'=>'rua','type'=>'text','placeholder'=>'Digite manualmente o complemento(número de rua, apto)','Value'=>set_value('rua'))) . 
                                                 "</div>" .  
                                                 "<div class='form-group'>" . 
                                                     form_label('Bairro','bairro') .
@@ -171,7 +171,7 @@
                                                 "</div>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('Cidade','cidade') .
-                                                    form_input(array('class'=>'form-control','id'=>'cidade','name'=>'cidade','type'=>'text','placeholder'=>'Cidade','Value'=>set_value('cidade'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'cidade_ID','name'=>'cidade_ID','type'=>'text','placeholder'=>'Cidade','Value'=>set_value('cidade'))) . 
                                                 "</div>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('Estado','estado') .

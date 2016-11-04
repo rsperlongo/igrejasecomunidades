@@ -134,7 +134,7 @@
         
     }
     
-    function salvar_alteracao() {
+    function salvar_alteracao_cadastro() {
         if(null != $this->session->userdata('logado')){
             $this->load->library('form_validation');
             $this->form_validation->set_rules('nome','required|min_lenght[5]');
@@ -157,6 +157,13 @@
             $dados['twitter'] = $this->input->post('twitter');
             $dados['facebook'] = $this->input->post('facebook');
             $dados['site'] = $this->input->post('site');
+            $dados['segunda'] = $this->input->post('segunda');
+            $dados['terca'] = $this->input->post('terca');
+            $dados['quarta'] = $this->input->post('quarta');
+            $dados['quinta'] = $this->input->post('quinta');
+            $dados['sexta'] = $this->input->post('sexta');
+            $dados['sabado'] = $this->input->post('sabado');
+            $dados['domingo'] = $this->input->post('domingo');
             $dados['email'] = $this->input->post('email');
             $dados['senha'] = $this->input->post('senha');
             $dados['ativar'] = 0;

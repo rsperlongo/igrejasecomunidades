@@ -68,7 +68,7 @@
                                 </div>
                                 <?php
                                     echo validation_errors();
-                                    echo form_open(base_url('cadastro/salvar_alteracao'), array('id'=>'form_cadastro')) . 
+                                    echo form_open(base_url('cadastro/salvar_alteracao_cadastro'), array('id'=>'form_cadastro')) . 
                                     "<section id='agency'>" .   
                                         "<h3>Dados Cadastrais</h3>" . 
                                         "<div class='row'>" . 
@@ -123,12 +123,6 @@
                                         
                                             "</div>" .
                                             "</dd>" . 
-                                        "<dt>" . form_label('Telefones','telefones') . "</dt>" .
-                                            "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'telefones','name'=>'telefones','type'=>'text','value'=>$igrejas[0]->telefones)) .
-                                        
-                                            "</div>" .
-                                            "</dd>" .  
                                         "<dt>" . form_label('Telefones','telefones') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
                                                 form_input(array('class'=>'form-control','id'=>'telefones','name'=>'telefones','type'=>'text','value'=>$igrejas[0]->telefones)) .

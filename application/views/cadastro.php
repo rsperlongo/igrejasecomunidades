@@ -68,7 +68,7 @@
                                 </div>
                                 <?php
                                     echo validation_errors();
-                                    echo form_open(base_url('cadastro/salvar_alteracao_cadastro'), array('id'=>'form_cadastro')) . 
+                                    echo form_open(base_url('cadastro/salvar_alteracao_cadastro'), array('id'=>'form_cadastro','role'=>'form')) .  
                                     "<section id='agency'>" .   
                                         "<h3>Dados Cadastrais</h3>" . 
                                         "<div class='row'>" . 
@@ -199,9 +199,11 @@
                                         "<section id='social'>" .  
                                             "<div class='form-group clearfix'>" .
                                                 form_submit('LoginSubmit', 'Salvar Alterações', "class='btn pull-right btn-default'") .
-                                             "</div>" .
-                                             form_close();         
-                                ?> 
+                                                            
+                                            "</div>" .   
+                                       "</section>" .
+                                       form_close();              
+                                ?>
                                 <section id="change-password">
                                         <header><h2>Mude sua Senha</h2></header>
                                         <div class="row">

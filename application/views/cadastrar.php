@@ -150,71 +150,71 @@
                                             "<div class='form-group'>" . 
                                                 "<div id='the-basics'>" . 
                                                     form_label('Denominação','denominacao') . 
-                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao','type'=>'text','placeholder'=>'Denominacao','Value'=>  set_value('denominacao'))) . 
+                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao','type'=>'text','placeholder'=>'Denominacao','Value'=>set_value('denominacao'))) . 
                                                 "</div>" .  
                                                 "<div class='form-group'>" . 
                                                     form_label('Nome da Igreja','nome') . 
-                                                    form_input(array('class'=>'form-control','id'=>'nome','name'=>'nome','type'=>'text','placeholder'=>'Nome da Igreja','Value'=>  set_value('nome'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'nome','name'=>'nome','type'=>'text','placeholder'=>'Nome da Igreja','Value'=>set_value('nome'))) . 
                                                  "</div>" . 
                                                  "<div class='form-group'>" . 
                                                     form_label('CEP','cep') . 
-                                                    form_input(array('class'=>'form-control','id'=>'cep','name'=>'cep','type'=>'text','placeholder'=>'CEP','Value'=>  set_value('cep'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'cep','name'=>'cep','type'=>'text','placeholder'=>'CEP','Value'=>set_value('cep'))) . 
                                                     "<span>Não achou o CEP?</span>" . anchor("http://www.buscacep.correios.com.br/sistemas/buscacep/","Busca CEP") .  
                                                 "</div>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('Endereço','rua') .
-                                                    form_input(array('class'=>'form-control','id'=>'rua','name'=>'rua','type'=>'text','placeholder'=>'Endereço','Value'=>  set_value('rua'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'rua','name'=>'rua','type'=>'text','placeholder'=>'Endereço','Value'=>set_value('rua'))) . 
                                                 "</div>" .  
                                                 "<div class='form-group'>" . 
                                                     form_label('Bairro','bairro') .
-                                                    form_input(array('class'=>'form-control','id'=>'bairro','name'=>'bairro','type'=>'text','placeholder'=>'Bairro','Value'=>  set_value('bairro'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'bairro','name'=>'bairro','type'=>'text','placeholder'=>'Bairro','Value'=>set_value('bairro'))) . 
                                                 "</div>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('Cidade','cidade') .
-                                                    form_input(array('class'=>'form-control','id'=>'cidade','name'=>'cidade','type'=>'text','placeholder'=>'Cidade','Value'=>  set_value('cidade'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'cidade','name'=>'cidade','type'=>'text','placeholder'=>'Cidade','Value'=>set_value('cidade'))) . 
                                                 "</div>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('Estado','estado') .
-                                                    form_input(array('class'=>'form-control','id'=>'estado','name'=>'estado','type'=>'text','placeholder'=>'Estado','Value'=>  set_value('estado'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'estado','name'=>'estado','type'=>'text','placeholder'=>'Estado','Value'=>set_value('estado'))) . 
                                                 "</div>" . 
                                                 
                                                 "<div class='form-group'>" . 
                                                     form_label('Telefones','telefones') .
-                                                    form_input(array('class'=>'form-control','id'=>'telefones','name'=>'telefones','type'=>'text','placeholder'=>'Número','Value'=>  set_value('telefones'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'telefones','name'=>'telefones','type'=>'text','placeholder'=>'Número','Value'=>set_value('telefones'))) . 
                                                 "</div>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('Pastor Responsável','responsavel') .
-                                                    form_input(array('class'=>'form-control','id'=>'responsavel','name'=>'responsavel','type'=>'text','placeholder'=>'Pastor Responsável','Value'=>  set_value('responsavel'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'responsavel','name'=>'responsavel','type'=>'text','placeholder'=>'Pastor Responsável','Value'=>set_value('responsavel'))) . 
                                                 "</div>" . 
                                                 "<section id='social'>" .
                                                 heading('Redes Sociais', 3) . 
                                                 "<div class='form-group'>" .
                                                     "<div class='input-group'>" . 
                                                         "<span class='input-group-addon'><i class='fa fa-twitter'></i></span>" . 
-                                                            form_input(array('class'=>'form-control','id'=>'twitter','name'=>'twitter','type'=>'text','placeholder'=>'Twitter','Value'=>  set_value('twitter'))) .
+                                                            form_input(array('class'=>'form-control','id'=>'twitter','name'=>'twitter','type'=>'text','placeholder'=>'Twitter','Value'=>set_value('twitter'))) .
                                                     "</div>" .
                                                 "</div>" . 
                                                 
                                                 "<div class='form-group'>" .
                                                     "<div class='input-group'>" . 
                                                         "<span class='input-group-addon'><i class='fa fa-facebook'></i></span>" . 
-                                                            form_input(array('class'=>'form-control','id'=>'facebook','name'=>'facebook','type'=>'text','placeholder'=>'Facebook','Value'=>  set_value('twitter'))) .
+                                                            form_input(array('class'=>'form-control','id'=>'facebook','name'=>'facebook','type'=>'text','placeholder'=>'Facebook','Value'=>set_value('twitter'))) .
                                                     "</div>" .
                                                 "</div>" . 
                                                 
                                                 "<div class='form-group'>" .
                                                     "<div class='input-group'>" . 
                                                         "<span class='input-group-addon'><i class='fa fa-globe'></i></span>" . 
-                                                            form_input(array('class'=>'form-control','id'=>'site','name'=>'site','type'=>'text','placeholder'=>'http://','Value'=>  set_value('site'))) .
+                                                            form_input(array('class'=>'form-control','id'=>'site','name'=>'site','type'=>'text','placeholder'=>'http://','Value'=>set_value('site'))) .
                                                     "</div>" .
                                                 "</div>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('E-mail','email') .
-                                                    form_input(array('class'=>'form-control','id'=>'email','name'=>'email','type'=>'email','placeholder'=>'E-mail','Value'=>  set_value('email'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'email','name'=>'email','type'=>'email','placeholder'=>'E-mail','Value'=>set_value('email'))) . 
                                                 "</div>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('Senha','senha') .
-                                                    form_input(array('class'=>'form-control','id'=>'senha','name'=>'senha','type'=>'password','placeholder'=>'Senha','Value'=>  set_value('senha'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'senha','name'=>'senha','type'=>'password','placeholder'=>'Senha','Value'=>set_value('senha'))) . 
                                                 "</div>" . 
                                             "</div>" . 
                                         "</div>" .

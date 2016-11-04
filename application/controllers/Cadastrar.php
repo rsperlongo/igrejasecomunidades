@@ -4,6 +4,8 @@
 
      function __construct() {
          parent::__construct();
+         $this->load->model('igrejas_model');
+         $igrejas = $this->input->post('igrejas');
     }
     
     public function index() {
@@ -137,6 +139,7 @@
     function salvar_alteracao_cadastro() {
         if(null != $this->session->userdata('logado')){
             $this->load->library('form_validation');
+            $this->load->helper('form');
             $this->form_validation->set_rules('nome','required|min_lenght[5]');
             $this->form_validation->set_rules('email','required|valid_email');
             if ($this->form_validation->run() == FALSE){
@@ -170,7 +173,8 @@
             $this->db->query("INSERT INTO igrejas SELECT * FROM igrejas WHERE md5(id) = '".$this->input->post('id')."'");
             $this->db->where('md5(id)', $this->input->post('id'));
             if($this->db->update('igrejas',$dados)){
-                echo "Cadastro Alterado com Sucesso!";
+                echo "Dados alterados com sucesso!";
+                
             }
             else {
                 echo "Houve um erro ao processar a alteração";

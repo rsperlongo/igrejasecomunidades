@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                                     
-                                <form role="form" id="form-account-profile" method="post" >
+                            <!--        <form role="form" id="form-account-profile" method="post" action="<?php //base_url('cadastro/salvar_alteracao_cadastro')?>" enctype="multpart/form-data" >
                                         <div class="checkbox switch" id="agent-switch" data-agent-state="is-agent">
                                            
                                         </div>
@@ -75,16 +75,13 @@
                                             <h3>Dados Cadastrais</h3>
                                             <div class="row">
                                                 <div class="col-md-4 col-sm-4">
-                                                    <label for="account-agency">Denominação:</label>
+                                                    <label for="denominacao">Denominação:</label>
                                                 </div>
-                                                <div class="col-md-8 col-sm-8">
-                                                    <div class="form-group">
-                                                        <select name="account-agency" id="account-agency">
-                                                            <option value="">Presbiteriana</option>
-                                                            <option value="1">Batista</option>
-                                                            
-                                                        </select>
-                                                    </div><!-- /.form-group -->
+                                                    <div class="col-md-8 col-sm-8">
+                                                        <div id="the-basics">
+                                                            <input type="text" class="typeahead" name="denominacao" id="denominacao" >
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </section>
@@ -94,39 +91,39 @@
                                                 <dt><label for="form-account-name">Nome da Igreja:</label></dt>
                                                 <dd><div class="form-group">
                                                     <input type="text" class="form-control" id="form-account-name" name="form-account-name" required value="Igreja Presbiteriana Emanuel">
-                                                </div><!-- /.form-group --></dd>
-                                                <dt><label for="form-account-phone">Endereço:</label></dt>
+                                                </div></dd>
+                                                <dt><label for="form-account-phone">CEP:</label></dt>
                                                 <dd><div class="form-group">
-                                                    <input type="text" class="form-control" id="form-account-phone" name="form-account-phone" value="Rua Padre Antonio, 345">
-                                                </div><!-- /.form-group --></dd>
-                                                <dt><label for="form-account-email">Bairro:</label></dt>
+                                                    <input type="text" class="form-control" id="cep" name="cep" value="Rua Padre Antonio, 345">
+                                                </div></dd>
+                                                <dt><label for="form-account-email">rua:</label></dt>
                                                 <dd><div class="form-group">
-                                                    <input type="text" class="form-control" id="form-account-email" name="form-account-phone" value="Piedade">
-                                                </div><!-- /.form-group --></dd>
+                                                    <input type="text" class="form-control" id="rua" name="rua" value="Piedade">
+                                                </div></dd>
                                                 <dt><label for="estado">Estado:</label></dt>
                                                 <dd><div class="form-group">
                                                     <input type="text" class="form-control" id="form-account-email" name="form-account-phone" value="CE">
-                                                </div><!-- /.form-group --></dd>
+                                                </div></dd>
                                                   <dt><label for="cidade">Cidade:</label></dt>
                                                 <dd><div class="form-group">
                                                     <input type="text" class="form-control" id="form-account-email" name="form-account-phone" value="Fortaleza">
-                                                </div><!-- /.form-group --></dd>
+                                                </div></dd>
                                                  <dt><label for="form-account-email">Região:</label></dt>
                                                 <dd><div class="form-group">
                                                     <input type="text" class="form-control" id="form-account-email" name="form-account-phone" value="Nordeste">
-                                                </div><!-- /.form-group --></dd>
+                                                </div></dd>
                                                 <dt><label for="form-account-email">Telefone:</label></dt>
                                                 <dd><div class="form-group">
                                                     <input type="tel" class="form-control" id="form-account-email" name="form-account-phone" value="(85) 3254-2688">
-                                                </div><!-- /.form-group --></dd>
+                                                </div></dd>
                                                 <dt><label for="form-account-email">Pastor Responsável:</label></dt>
                                                 <dd><div class="form-group">
                                                     <input type="text" class="form-control" id="form-account-email" name="form-account-phone" value="Rev. Hernandes Dias Lopes">
-                                                </div><!-- /.form-group --></dd>
+                                                </div></dd>
                                                  <dt><label for="form-account-email">Email:</label></dt>
                                                 <dd><div class="form-group">
                                                     <input type="email" class="form-control" id="form-account-email" name="form-account-phone" value="igreja">
-                                                </div><!-- /.form-group --></dd>
+                                                </div></dd>
                                             </dl>
                                         </section>
                                         
@@ -137,25 +134,25 @@
                                                     <span class="input-group-addon"><i class="fa fa-twitter"></i></span>
                                                     <input type="text" class="form-control" id="account-social-twitter" name="account-social-twitter">
                                                 </div>
-                                            </div><!-- /.form-group -->
+                                            </div>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-facebook"></i></span>
                                                     <input type="text" class="form-control" id="account-social-facebook" name="account-social-facebook" >
                                                 </div>
-                                            </div><!-- /.form-group -->
+                                            </div>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-pinterest"></i></span>
                                                     <input type="text" class="form-control" id="account-social-pinterest" name="account-social-pinterest">
                                                 </div>
-                                            </div><!-- /.form-group -->
+                                            </div>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-globe"></i></span>
                                                     <input type="text" class="form-control" id="website" name="website" placeholder="http://">
                                                 </div>
-                                            </div><!-- /.form-group -->
+                                            </div>
                                         </section>    
                                         <section id="about-me">
                                             <h3>Programação Semanal</h3>
@@ -164,66 +161,67 @@
                                                 <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.
 Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. Aliquam posuere fermentum lorem, a aliquam mauris rutrum.</textarea>
-                                            </div><!-- /.form-group -->
+                                            </div>
                                         <div class="form-group">
                                                 <label for="segunda">Terça-Feira</label>
                                                 <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.
 Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. Aliquam posuere fermentum lorem, a aliquam mauris rutrum.</textarea>
-                                            </div><!-- /.form-group --> 
+                                            </div>
                                             <div class="form-group">
                                                 <label for="segunda">Quarta-Feira</label>
                                                 <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.
 Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. Aliquam posuere fermentum lorem, a aliquam mauris rutrum.</textarea>
-                                            </div><!-- /.form-group -->
+                                            </div>
                                             <div class="form-group">
                                                 <label for="segunda">Quinta-Feira</label>
                                                 <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.
 Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. Aliquam posuere fermentum lorem, a aliquam mauris rutrum.</textarea>
-                                            </div><!-- /.form-group --> 
+                                            </div>
                                             <div class="form-group">
                                                 <label for="segunda">Sexta-Feira</label>
                                                 <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.
 Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. Aliquam posuere fermentum lorem, a aliquam mauris rutrum.</textarea>
-                                            </div><!-- /.form-group -->
+                                            </div>
                                             <div class="form-group">
                                                 <label for="segunda">Sábado</label>
                                                 <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.
 Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. Aliquam posuere fermentum lorem, a aliquam mauris rutrum.</textarea>
-                                            </div><!-- /.form-group -->
+                                            </div>
                                             <div class="form-group">
                                                 <label for="segunda">Domingo</label>
                                                 <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.
 Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. Aliquam posuere fermentum lorem, a aliquam mauris rutrum.</textarea>
-                                            </div><!-- /.form-group --> 
+                                            </div>
                                         </section>
                                         <section id="social">
                                             <div class="form-group clearfix">
-                                                <button type="submit" class="btn pull-right btn-default" id="account-submit">Salvar Alterações</button>
-                                            </div><!-- /.form-group -->
+                                                
+                                                <button type="submit" class="btn pull-right btn-default" id="account-submit" value="salvar">Salvar Alterações</button>
+                                            </div>
+                                           
                                         </section>
-                                    </form><!-- /#form-contact -->    
+                                 </form> -->        
                                 <?php
-                                    
-                                  /*  echo validation_errors();
-                                    echo form_open(base_url('cadastro/salvar_alteracao_cadastro'), array('id'=>'form_cadastro','role'=>'form')) .  
+                                
+                                echo validation_errors();
+                                echo form_open(base_url('cadastro/salvar_alteracao_cadastro'), array('id'=>'form_cadastro')) .  
                                     "<section id='agency'>" .   
                                         "<h3>Dados Cadastrais</h3>" . 
                                         "<div class='row'>" . 
                                             "<div class='col-md-4 col-sm-4'>" . 
                                             "<div id='the-basics'>" . 
-                                                    form_hidden('id',$id) .
                                                     form_label('Denominação','denominacao') . 
-                                                   
                                             "</div>" .
                                             "<div class='col-md-8 col-sm-8'>" .
                                                 "<div class='form-group'>" . 
-                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao','value'=>$id[0]->denominacao)) . 
+                                                  //  form_hidden('id', md5($igrejas[0]->id)) .
+                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao_ID[0]', set_value('denominacao_ID[0]'))) . 
                                                 "</div>" .    
                                              "</div>" .
                                             "</div>" .
@@ -232,7 +230,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                         "<dl class='contact-fields'>" . 
                                         "<dt>" . form_label('Nome da Igreja','nome') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'nome','name'=>'nome','type'=>'text','value'=>$id[0]->nome)) .
+                                                form_input(array('class'=>'form-control','id'=>'nome','name'=>'nome','type'=>'text','value'=>$igrejas[0]->nome)) .
                                         
                                             "</div>" .
                                             "</dd>" . 
@@ -309,7 +307,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                         "</div>" . 
                                     "</section>"  . 
                                     "<section id='about-me'>" . 
-                                    "<h3>Redes Sociais e Site</h3>" .  
+                                    "<h3>Programação Semanal</h3>" .  
                                        "<div class='form-group'>" . 
                                             form_label('Segunda-Feira','segunda') . 
                                             form_textarea(array('class'=>'form-control','id'=>'segunda','name'=>'segunda','rows'=>'5','value'=>$igrejas[0]->segunda)) . 
@@ -345,7 +343,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                                             
                                             "</div>" .   
                                        "</section>" .
-                                       form_close();     */         
+                                       form_close();            
                                 ?>
                                 <section id="change-password">
                                         <header><h2>Mude sua Senha</h2></header>
@@ -355,7 +353,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                                 echo form_open(base_url('cadastro/salvar_alteracao'), array('id'=>'form_cadastro')) . 
                                                     "<div class='form-group'>" . 
                                                         form_label('Senha Atual','senha') . 
-                                                        form_input(array('class'=>'form-control','id'=>'senha','name'=>'senha','type'=>'password','value'=>$igrejas[0]->senha)) .
+                                                        form_input(array('class'=>'form-control','id'=>'senha','name'=>'senha','type'=>'password','value'=>set_value('senha'))) .
                                                     "</div>" .   
                                                     "<div class='form-group'>" . 
                                                         form_label('Nova Senha','novasenha') . 
@@ -368,6 +366,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                                     "<div class='form-group clearfix'>" .
                                                         form_submit('LoginSubmit', 'Alterar Senha', "class='btn btn-default'") .
                                                     "</div>" .
+                                                    "</div>" .    
                                                     form_close();      
                                                         
                                                         
@@ -404,11 +403,6 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                 </div><!-- /.col-md-9 -->
                             </div><!-- /.row -->
                         </div><!-- /.account-profile -->
-                    </section><!-- /#profile -->
-                </div><!-- /.col-md-9 -->
-                <!-- end My Properties -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </div>
+                    
     <!-- end Page Content -->
 <?php include 'footer.php'?>

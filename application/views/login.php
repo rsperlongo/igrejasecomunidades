@@ -35,7 +35,7 @@
                 <div class="col-md-6">
                 <h2>Ainda não é cadastrado?</h2>
                     <p>Cadastre-se agora mesmo e tenha sua igreja e/ou comunidade no maior portal do brasil. São milhares cadastros reunidos em um único banco de dados, oferecendo uma descrição completa sobre sua igreja.</p>
-                    <a href="cadastrar.php" type="button" class="btn btn-success">Quero me cadastrar!</a>
+                    <a  type="button" onclick="location.href='./cadastrar'" class="btn btn-success">Quero me cadastrar!</a>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container -->

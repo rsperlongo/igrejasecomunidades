@@ -9,6 +9,7 @@
     }
     
     public function index() {
+      
         
         $this->load->view('cadastrar');
         
@@ -43,31 +44,30 @@
     public function adicionar() {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('nome', 'Nome','required|min_length[5]');
-        $this->form_validation->set_rules('cpf', 'CPF', 'required|min_length[14]');
-        $this->form_validation->set_rules('email', 'E-mail', 'required|valid_email|is_unique[clientes.email]');
+        $this->form_validation->set_rules('email', 'E-mail', 'required|valid_email');
         if ($this->form_validation->run() == FALSE){
         $this->index();
         
         }
             else {
-                $dados['denominacao'] = $this->input->post('denominacao');
+                $dados['denominacao_ID'] = $this->input->post("SELECT * FROM igreja WHERE denominacao_ID as denominacao");
                 $dados['nome'] = $this->input->post('nome');
                 $dados['cep'] = $this->input->post('cep');
                 $dados['rua'] = $this->input->post('rua');
                 $dados['bairro'] = $this->input->post('bairro');
-                $dados['cidade'] = $this->input->post('cidade');
-                $dados['estado'] = $this->input->post('estado');
-                $dados['numero'] = $this->input->post('numero');
-                $dados['regiao'] = $this->input->post('regiao');
-                $dados['telefone'] = $this->input->post('telefone');
+                $dados['cidade_ID'] = $this->input->post('cidade_ID');
+                $dados['cidade_ID'] = $this->input->post("SELECT * FROM igreja WHERE cidade_ID as uf");
+                $dados['telefones'] = $this->input->post('telefones');
                 $dados['responsavel'] = $this->input->post('responsavel');
                 $dados['twitter'] = $this->input->post('twitter');
                 $dados['facebook'] = $this->input->post('facebook');
                 $dados['site'] = $this->input->post('site');
                 $dados['email'] = $this->input->post('email');
                 $dados['senha'] = $this->input->post('senha');
+                
                 if($this->db->insert('igrejas',$dados)){
                     echo "Dados Cadastrados com Sucesso!";
+                    redirect('home');
                 }
                 else {
                     echo "Houve um erro ao processar seus dados";

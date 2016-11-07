@@ -175,7 +175,7 @@
                                                 "</div>" . 
                                                 "<div class='form-group'>" . 
                                                     form_label('Estado','estado') .
-                                                    form_input(array('class'=>'form-control','id'=>'estado','name'=>'estado','type'=>'text','placeholder'=>'Estado','Value'=>set_value('estado'))) . 
+                                                    form_input(array('class'=>'form-control','id'=>'cidade_ID','name'=>'estado','type'=>'text','placeholder'=>'Estado','Value'=>set_value('estado'))) . 
                                                 "</div>" . 
                                                 
                                                 "<div class='form-group'>" . 

@@ -1,0 +1,2 @@
+"Select Distinct(cidades.estado) AS mmestado, cidades.uf From cidades Inner Join igrejas On 
+igrejas.cidade_ID = cidades.ID ORDER BY estado ASC"	

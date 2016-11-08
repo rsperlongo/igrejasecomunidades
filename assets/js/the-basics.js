@@ -34,7 +34,9 @@ var states = ['Batista', 'IEQ - Igreja do Evangelho Quadrangular', 'Adventista',
 $('#the-basics .typeahead').typeahead({
   hint: true,
   highlight: true,
-  minLength: 1
+  minLength: 1,
+  background: 'white'
+  
 },
 {
   name: 'states',

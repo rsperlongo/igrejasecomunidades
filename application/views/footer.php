@@ -110,6 +110,7 @@
 <script type="text/javascript" src="assets/js/bootstrap-fileinput.js"></script>
 <script type="text/javascript" src="assets/js/typeahead.js"></script>
 <script type="text/javascript" src="assets/js/the-basics.js"></script>
+<script type="text/javascript" src="assets/js/prefetch.js"></script>
 <script type="text/javascript" src="assets/js/funcoes.js"></script>
 
 <script type="text/javascript" src="assets/js/jquery.maskedinput.js"></script>
@@ -117,6 +118,8 @@
 <!--[if gt IE 8]>
 <script type="text/javascript" src="assets/js/ie.js"></script>
 <![endif]-->
+
+
 <script>
     _latitude = 48.87;
     _longitude = 2.29;

@@ -225,7 +225,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                             "<div class='col-md-8 col-sm-8'>" .
                                                 "<div class='form-group'>" . 
                                                   //  form_hidden('id', md5($igrejas[0]->id)) .
-                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao_ID[0]', 'value'=> set_value('denominacao_ID'))) . 
+                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao_ID', 'value'=> set_value('denominacao_ID'))) . 
                                                 "</div>" .    
                                              "</div>" .
                                              "</div>" .
@@ -234,55 +234,55 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                         "<dl class='contact-fields'>" . 
                                         "<dt>" . form_label('Nome da Igreja','nome') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'nome','name'=>'nome[0]','type'=>'text','value'=> set_value('nome'))) .
+                                                form_input(array('class'=>'form-control','id'=>'nome','name'=>'nome','type'=>'text','value'=> set_value('nome'))) .
                                         
                                             "</div>" .
                                             "</dd>" . 
                                         "<dt>" . form_label('CEP','cep') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'cep','name'=>'cep[0]','type'=>'text','value'=> set_value('cep'))) .
+                                                form_input(array('class'=>'form-control','id'=>'cep','name'=>'cep','type'=>'text','value'=> set_value('cep'))) .
                                         
                                             "</div>" .
                                             "</dd>" .   
                                         "<dt>" . form_label('Endereço','rua') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'rua','name'=>'rua[0]','type'=>'text','value'=> set_value('rua[0]'))) .
+                                                form_input(array('class'=>'form-control','id'=>'rua','name'=>'rua','type'=>'text','value'=> set_value('rua'))) .
                                         
                                             "</div>" .
                                             "</dd>" .  
                                         "<dt>" . form_label('Bairro','bairro') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'bairro','name'=>'bairro[0]','type'=>'text','value'=> set_value('bairro[0]'))) .
+                                                form_input(array('class'=>'form-control','id'=>'bairro','name'=>'bairro','type'=>'text','value'=> set_value('bairro'))) .
                                         
                                             "</div>" .
                                             "</dd>" .   
                                         "<dt>" . form_label('Cidade','cidade') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'cidade','name'=>'cidade_ID[0]','type'=>'text','value'=> set_value('cidade[0]'))) .
+                                                form_input(array('class'=>'form-control','id'=>'cidade','name'=>'cidade_ID','type'=>'text','value'=> set_value('cidade'))) .
                                         
                                             "</div>" .
                                             "</dd>" .  
                                         "<dt>" . form_label('Estado','estado') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'estado','name'=>'cidade[0]','type'=>'text','value'=> set_value('estado[0]'))) .
+                                                form_input(array('class'=>'form-control','id'=>'estado','name'=>'cidade','type'=>'text','value'=> set_value('estado'))) .
                                         
                                             "</div>" .
                                             "</dd>" . 
                                         "<dt>" . form_label('Telefones','telefones') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'telefones','name'=>'telefones[0]','type'=>'text','value'=> set_value('telefones[0]'))) .
+                                                form_input(array('class'=>'form-control','id'=>'telefones','name'=>'telefones','type'=>'text','value'=> set_value('telefones'))) .
                                         
                                             "</div>" .
                                             "</dd>" . 
                                          "<dt>" . form_label('Pastor Responsável','responsavel') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'responsavel','name'=>'responsavel[0]','type'=>'text','value'=> set_value('responsavel[0]'))) .
+                                                form_input(array('class'=>'form-control','id'=>'responsavel','name'=>'responsavel','type'=>'text','value'=> set_value('responsavel'))) .
                                         
                                             "</div>" .
                                             "</dd>" . 
                                         "<dt>" . form_label('E-mail','email') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'email','name'=>'email[0]','type'=>'email','value'=> set_value('email[0]'))) .
+                                                form_input(array('class'=>'form-control','id'=>'email','name'=>'email','type'=>'email','value'=> set_value('email'))) .
                                         
                                             "</div>" .
                                             "</dd>" . 
@@ -292,21 +292,21 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                         "<div class='form-group'>" .
                                             "<div class='input-group'>" . 
                                                 "<span class='input-group-addon'><i class='fa fa-twitter'></i></span>" . 
-                                                    form_input(array('class'=>'form-control','id'=>'twitter','name'=>'twitter[0]','type'=>'text','value'=> set_value('twitter[0]'))) .
+                                                    form_input(array('class'=>'form-control','id'=>'twitter','name'=>'twitter','type'=>'text','value'=> set_value('twitter'))) .
                                             "</div>" .
                                         "</div>" . 
 
                                         "<div class='form-group'>" .
                                             "<div class='input-group'>" . 
                                                 "<span class='input-group-addon'><i class='fa fa-facebook'></i></span>" . 
-                                                    form_input(array('class'=>'form-control','id'=>'facebook','name'=>'facebook[0]','type'=>'text','value'=>set_value('facebook[0]'))) .
+                                                    form_input(array('class'=>'form-control','id'=>'facebook','name'=>'facebook','type'=>'text','value'=>set_value('facebook'))) .
                                             "</div>" .
                                         "</div>" . 
 
                                         "<div class='form-group'>" .
                                             "<div class='input-group'>" . 
                                                 "<span class='input-group-addon'><i class='fa fa-globe'></i></span>" . 
-                                                    form_input(array('class'=>'form-control','id'=>'site','name'=>'site[0]','type'=>'text','value'=>set_value('site[0]'))) .
+                                                    form_input(array('class'=>'form-control','id'=>'site','name'=>'site','type'=>'text','value'=>set_value('site'))) .
                                             "</div>" .
                                         "</div>" . 
                                     "</section>"  . 
@@ -314,31 +314,31 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                     "<h3>Programação Semanal</h3>" .  
                                        "<div class='form-group'>" . 
                                             form_label('Segunda-Feira','segunda') . 
-                                            form_textarea(array('class'=>'form-control','id'=>'segunda','name'=>'segunda[0]','rows'=>'5','value'=>set_value('segunda[0]'))) . 
+                                            form_textarea(array('class'=>'form-control','id'=>'segunda','name'=>'segunda','rows'=>'5','value'=>set_value('segunda'))) . 
                                         "</div>" . 
                                         "<div class='form-group'>" . 
                                             form_label('Terça-Feira','terca') . 
-                                            form_textarea(array('class'=>'form-control','id'=>'terca','name'=>'terca[0]','rows'=>'5','value'=>set_value('terca[0]'))) . 
+                                            form_textarea(array('class'=>'form-control','id'=>'terca','name'=>'terca','rows'=>'5','value'=>set_value('terca'))) . 
                                         "</div>" . 
                                         "<div class='form-group'>" . 
                                             form_label('Quarta-Feira','quarta') . 
-                                            form_textarea(array('class'=>'form-control','id'=>'quarta','name'=>'quarta[0]','rows'=>'5','value'=>set_value('quarta[0]'))) . 
+                                            form_textarea(array('class'=>'form-control','id'=>'quarta','name'=>'quarta','rows'=>'5','value'=>set_value('quarta'))) . 
                                         "</div>" .   
                                         "<div class='form-group'>" . 
                                             form_label('Quinta-Feira','quinta') . 
-                                            form_textarea(array('class'=>'form-control','id'=>'quinta','name'=>'quinta[0]','rows'=>'5','value'=>set_value('quinta[0]'))) . 
+                                            form_textarea(array('class'=>'form-control','id'=>'quinta','name'=>'quinta','rows'=>'5','value'=>set_value('quinta'))) . 
                                         "</div>" .  
                                         "<div class='form-group'>" . 
                                             form_label('Sexta-Feira','sexta') . 
-                                            form_textarea(array('class'=>'form-control','id'=>'sexta','name'=>'sexta[0]','rows'=>'5','value'=>set_value('sexta[0]'))) . 
+                                            form_textarea(array('class'=>'form-control','id'=>'sexta','name'=>'sexta','rows'=>'5','value'=>set_value('sexta'))) . 
                                         "</div>" .  
                                         "<div class='form-group'>" . 
                                             form_label('Sábado','sabado') . 
-                                            form_textarea(array('class'=>'form-control','id'=>'sabado','name'=>'sabado[0]','rows'=>'5','value'=>set_value('sabado[0]'))) . 
+                                            form_textarea(array('class'=>'form-control','id'=>'sabado','name'=>'sabado','rows'=>'5','value'=>set_value('sabado'))) . 
                                         "</div>" . 
                                         "<div class='form-group'>" . 
                                             form_label('Domingo','domingo') . 
-                                            form_textarea(array('class'=>'form-control','id'=>'domingo','name'=>'domingo[0]','rows'=>'5','value'=>set_value('domingo[0]'))) . 
+                                            form_textarea(array('class'=>'form-control','id'=>'domingo','name'=>'domingo','rows'=>'5','value'=>set_value('domingo'))) . 
                                         "</div>" . 
                                         "</section>" . 
                                         "<section id='social'>" .  

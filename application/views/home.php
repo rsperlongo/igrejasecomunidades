@@ -25,26 +25,20 @@
                                 <div class="row">
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
-                                            <select name="form-sale-country">
-                                                <option value="">Denominação</option>
-                                                <option value="1">Assembléia de Deus</option>
-                                                <option value="2">Assembléia de Deus Madureira</option>
-                                                <option value="3">Batista</option>
-                                                <option value="4">Deus é Amor</option>
-                                                <option value="5">Presbiteriana</option>
-                                            </select>
+                                            <div id="the-basics">
+                                                <label for="denominacao"></label>
+                                                <input type="text" class="typeahead" name="denominacao_ID" id="denominacao_ID" placeholder="Denominação">
+                                            </div>
                                         </div><!-- /.form-group -->
                                     </div>
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
-                                            <select name="form-sale-city">
-                                                <option value="">Estado</option>
-                                                <option value="1">Acre</option>
-                                                <option value="2">Amazonas</option>
-                                                <option value="3">Alagoas</option>
-                                                <option value="4">Bahia</option>
-                                                <option value="5">Ceará</option>
+                                           
+                                            <select class="form-control" id="estados" name="cidades_ID">
+                                                    <option value=""></option>
+                                                
                                             </select>
+                                            
                                         </div><!-- /.form-group -->
                                     </div>
                                     <div class="col-md-2 col-sm-4">

@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'carmem2016',
+	'hostname' => 'mysql2.iphotel.com.br',
+	'username' => 'igrejasecomunida',
+	'password' => 'ic002100',
 	'database' => 'igrejasecomunida',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

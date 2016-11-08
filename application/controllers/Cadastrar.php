@@ -125,9 +125,9 @@
             $this->db->where(md5('id'), $id);
             $this->db->where('id', $this->session->userdata('igrejas')->id);
             $this->db->where('ativar',1);
-            $data_body['igrejas'] = $this->db->get('igrejas')->result();
+            $this->db->get('igrejas')->result();
                 if(count(['igrejas'])== 1){
-                    $this->load->view('cadastro', $data_body);
+                    $this->load->view('cadastro');
                 }
                 else {
                     redirect (base_url("login"));

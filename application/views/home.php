@@ -21,7 +21,7 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="search-form-sale">
-                            <form role="form" id="form-map-sale" class="form-map form-search clearfix">
+                            <form role="form" id="busca" class="form-map form-search clearfix" enctype="multpart/form_data">
                                 <div class="row">
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
@@ -33,9 +33,12 @@
                                     </div>
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
-                                           
-                                            <select class="form-control" id="estados" name="cidades_ID">
-                                                    <option value=""></option>
+                                            <select class="form-control" id="cidades" name="cidades">
+                                               
+                                                <option value="" selected="selected">Escolha seu Estado</option>
+                                                    
+                                                <option value="1" <?php echo set_select('cidades','AC')?> >AC</option>
+                                                <option value="2" <?php echo set_select('cidades','AL')?> >AL</option>
                                                 
                                             </select>
                                             
@@ -43,13 +46,8 @@
                                     </div>
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
-                                            <select name="form-sale-district">
-                                                <option value="">Cidade</option>
-                                                <option value="1">Adamantina</option>
-                                                <option value="2">Atibaia</option>
-                                                <option value="3">Aparecida</option>
-                                                <option value="4">Andradina</option>
-                                                <option value="5">Águas Claras</option>
+                                            <select id="cidades" name="cidades">
+                                                <option value="" selected="selected" onchange="cidades">Escolha um Estado Primeiro...</option>
                                             </select>
                                         </div><!-- /.form-group -->
                                     </div>

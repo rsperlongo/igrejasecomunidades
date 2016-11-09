@@ -1,5 +1,54 @@
 <?php include 'header.php'?>
-
+<style>
+    .typeahead {
+        background-color: #FFFFFF;
+    }
+    .typeahead:focus {
+        border: 1px solid #999999;
+    }
+    .tt-query {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    }
+    .tt-hint {
+        color: #999999;
+    }
+    .typeahead, .tt-query, .tt-hint {
+        border: 1px solid #CCCCCC;
+        border-radius: 4px;
+        font-size: 16px;
+        height: 38px;
+        line-height: 30px;
+        outline: medium none;
+        padding: 8px 12px;
+        width: 396px;
+    }
+    .tt-dropdown-menu {
+        background-color: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        margin-top: 12px;
+        padding: 8px 0;
+        width: 422px;
+    }
+    .tt-suggestion {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 3px 20px;
+        color: #073855;
+        background-color: #FFFFFF;
+    }
+    .tt-suggestion p {
+        margin: 0;
+    }
+    .tt-suggestion.tt-is-under-cursor {
+        background-color: #999999;
+        color: #FF0000;
+    }
+    .down {
+        margin-top: 19px;
+    }
+</style>
     <div class="container">
         <div class="geo-location-wrapper">
             <span class="btn geo-location"><i class="fa fa-map-marker"></i><span class="text">Ache sua Localização</span></span>
@@ -33,37 +82,35 @@
                                     </div>
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
-                                            <select class="form-control" id="cidades" name="cidades">
-                                               
-                                                <option value="" selected="selected">Escolha seu Estado</option>
-                                                    
-                                                <option value="1" <?php echo set_select('cidades','AC')?> >AC</option>
-                                                <option value="2" <?php echo set_select('cidades','AL')?> >AL</option>
-                                                
-                                            </select>
-                                            
+                                            <div id="estados">
+                                            <label for="estado"></label>
+                                            <input type="text" class="typeahead" name="cidades_ID" placeholder="Estado">
+                                            </div> 
                                         </div><!-- /.form-group -->
                                     </div>
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
-                                            <select id="cidades" name="cidades">
-                                                <option value="" selected="selected" onchange="cidades">Escolha um Estado Primeiro...</option>
-                                            </select>
+                                            <div id="cidades">
+                                                <label for="cidades"></label>
+                                                <input type="text" class="typeahead" name="cidades" placeholder="Cidade">
+                                            </div>
                                         </div><!-- /.form-group -->
                                     </div>
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
-                                            <input type="text" placeholder="Bairro ou CEP">
+                                            <label for="CEP"></label>
+                                            <input type="text"  id="cep" name="cep" placeholder="Bairro ou CEP">
                                         </div><!-- /.form-group -->
                                     </div>
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
-                                            <input type="text" placeholder="Nome ou Cod.Ref">
+                                            <label for="referencia"></label>
+                                            <input type="text"  name="ID" id="ID" placeholder="Nome ou Cod.Ref">
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-default">Buscar Igrejas</button>
+                                            <button type="submit" name="buscar" id="buscar" class="btn btn-default down">Buscar Igrejas</button>
                                         </div><!-- /.form-group -->
                                     </div>
                                 </div>

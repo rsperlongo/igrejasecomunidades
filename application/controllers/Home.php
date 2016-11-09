@@ -14,19 +14,13 @@ class Home extends CI_Controller {
 	}
         
         public function busca() {
+            $this->load->model('igrejas_model');
+            $dados['igrejas'] = $this->igrejas->busca();
             
-            $this->load->view('busca');
+            $this->load->view('resultado-busca', $dados);
+            
         }
         
-        public function listarCidades($estados) {
-            $this->db->select("SELECT * FROM cidades WHERE estado as uf ORDER BY nome ASC");
-            $this->db->from('cidades');
-            if($estados == 'cidades'){
-                return $this->db->get($estados) ;
-        }
-            else {
-                return $this->db->get()->result();
-            }
-        
-        }
 }
+        
+        

@@ -61,6 +61,7 @@ $route['agenda'] = "cadastrar/agenda";
 $route['alterar-plano'] = "cadastrar/alterarPlano";
 $route['alterar-foto'] = "cadastrar/alterarFoto";
 $route['cadastro-pastores'] = "cadastrar/cadastroPastores";
+$route['busca'] = 'home/busca';
 
 
 

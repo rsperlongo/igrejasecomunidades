@@ -7,14 +7,6 @@ class Igrejas_model extends CI_Model {
         
     }
     
-    public function listar($filtro = NULL) {
-        $this->db->select("SELECT count(*) FROM igrejas WHERE nome,telefones,email,rua,responsavel,cep*");
-        $this->db->from('igrejas');
-        $tthis->db->order_by('ASC');
-        $this->db->get('igrejas')->result();
-                
-    }
-    
     public function busca($buscar) {
         $this->input->post('buscar');
         $this->db->select('*');
@@ -39,7 +31,7 @@ class Igrejas_model extends CI_Model {
 		$this->db->group_by('nome.id');
 		$this->db->order_by('denominacao.id','ASC');
 		if($pular && $igrejas_por_pagina_por_pagina){
-			$this->db->limit($igrejas_por_pagina_por_pagina,$pular);
+			$this->db->limit($igrejas_por_pagina,$pular);
 		}
 		else{
 			$this->db->limit(5);

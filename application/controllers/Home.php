@@ -5,6 +5,7 @@ class Home extends CI_Controller {
     
     public function __construct() {
         parent::__construct();
+        $this->load->model('eventos_model');
     }
 
 	
@@ -20,6 +21,11 @@ class Home extends CI_Controller {
             $this->load->view('resultado-busca', $dados);
             
         }
+        
+        public function destaques_eventos($id) {
+        $data_pagina['eventos'] = $this->eventos_model->listar_evento($id); 
+        $this->load->view('eventos', $data_pagina);
+    }
         
 }
         

@@ -70,7 +70,7 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="search-form-sale">
-                            <form role="form" id="busca" class="form-map form-search clearfix" enctype="multpart/form_data">
+                            <form action="<?php base_url('home/busca')?>" role="form" id="form_busca" class="form-map form-search clearfix" enctype="multpart/form_data">
                                 <div class="row">
                                     <div class="col-md-2 col-sm-4">
                                         <div class="form-group">
@@ -199,7 +199,7 @@
                             <aside class="description">
                                 <header><h3>Cadastre sua Igreja</h3></header>
                                 <p>Faça parte do maior da cadastro de Igrejas do Brasil</p>
-                                <a href="properties-listing.html" class="link-arrow">Leia Mais</a>
+                                <a onclick="location.href='./cadastrar'" class="link-arrow">Cadastre-se Agora!</a>
                             </aside>
                         </div><!-- /.feature-box -->
                     </div><!-- /.col-md-4 -->
@@ -209,7 +209,7 @@
                             <aside class="description">
                                 <header><h3>Anuncie em nosso site!</h3></header>
                                 <p>Anuncie em nosso site e tenha um banner em destaque no site! </p>
-                                <a href="agents-listing.html" class="link-arrow">Leia Mais</a>
+                                <a onclick="location.href='/cadastrar'" class="link-arrow">Leia Mais</a>
                             </aside>
                         </div><!-- /.feature-box -->
                     </div><!-- /.col-md-4 -->
@@ -217,9 +217,9 @@
                         <div class="feature-box equal-height">
                             <figure class="icon"><i class="fa fa-money"></i></figure>
                             <aside class="description">
-                                <header><h3>Patrocinadores</h3></header>
-                                <p>Seja um patrocinador e apareça em destaque!</p>
-                                <a href="#" class="link-arrow">Leia Mais</a>
+                                <header><h3>Atualize seu Endereço</h3></header>
+                                <p>Não deixe seu endereço desatualizado! As pessoas estão procurando uma igreja para frequentar!</p>
+                                <a onclick="location.href='./login'" class="link-arrow">Entre com Sua Conta</a>
                             </aside>
                         </div><!-- /.feature-box -->
                     </div><!-- /.col-md-4 -->
@@ -230,12 +230,32 @@
             <div class="container">
                 <header class="section-title">
                     <h2>Eventos</h2>
-                    <a href="properties-listing.html" class="link-arrow">Cadastre seu Evento</a>
+                     <?php echo (anchor(base_url('login'), 'Cadastre seu evento',"class='link-arrow'" ))?><!--  <a href="properties-listing.html" class="link-arrow">Cadastre seu Evento</a> -->
                 </header>
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="property">
-                            <a href="property-detail.html">
+                            <?php
+                            $contador = 0;
+                            foreach ($eventos as $evento) {
+                                $contador++;
+                            echo "div class='property-imagem'" ; 
+                                 if(is_file("assets/img/eventos/". md5($evento->id).".png")){
+                                     echo img(is_file("assets/img/eventos". md5($evento->id).".png"));
+                                 }
+                                 "</div>";
+                            }
+                            echo "<div class='overlay'>" . 
+                                   "<div class='info'>" .
+                                      "<div class='tag price'>Grátis</div>" . 
+                                          "<h3>Encontro de Casais</h3>" . 
+                                          "<figure>Av. Nações Unidas, 3333, São Paulo</figure>" . 
+                                    "</div>" . 
+                                  "</div>";  
+                                           
+                            ?>
+                            
+                           <!-- <a href="property-detail.html">
                                 <div class="property-image">
                                     <img alt="" src="assets/img/properties/property-06.jpg">
                                 </div>
@@ -261,100 +281,7 @@
                                         
                                     </ul>
                                 </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-04.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        <div class="tag price">Grátis</div>
-                                        <h3>Encontro de Casais</h3>
-                                        <figure>Av. Nações Unidas, 3333, São Paulo</figure>
-                                    </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Data:</header>
-                                            <figure>11/11/2016</figure>
-                                        </li>
-                                        <li>
-                                            <header>Vagas:</header>
-                                            <figure>111</figure>
-                                        </li>
-                                        <li>
-                                            <header>Hora:</header>
-                                            <figure>20:00</figure>
-                                        </li>
-                                        
-                                    </ul>
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-07.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        <div class="tag price">Grátis</div>
-                                        <h3>Encontro de Casais</h3>
-                                        <figure>Av. Nações Unidas, 3333, São Paulo</figure>
-                                    </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Data:</header>
-                                            <figure>11/11/2016</figure>
-                                        </li>
-                                        <li>
-                                            <header>Vagas:</header>
-                                            <figure>111</figure>
-                                        </li>
-                                        <li>
-                                            <header>Hora:</header>
-                                            <figure>20:00</figure>
-                                        </li>
-                                        
-                                    </ul>
-                                </div>
-                            </a>
-                        </div><!-- /.property -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="property">
-                            <a href="property-detail.html">
-                                <div class="property-image">
-                                    <img alt="" src="assets/img/properties/property-08.jpg">
-                                </div>
-                                <div class="overlay">
-                                    <div class="info">
-                                        <div class="tag price">Grátis</div>
-                                        <h3>Encontro de Casais</h3>
-                                        <figure>Av. Nações Unidas, 3333, São Paulo</figure>
-                                    </div>
-                                    <ul class="additional-info">
-                                        <li>
-                                            <header>Data:</header>
-                                            <figure>11/11/2016</figure>
-                                        </li>
-                                        <li>
-                                            <header>Vagas:</header>
-                                            <figure>111</figure>
-                                        </li>
-                                        <li>
-                                            <header>Hora:</header>
-                                            <figure>20:00</figure>
-                                        </li>
-                                        
-                                    </ul>
-                                </div>
-                            </a>
+                            </a> -->
                         </div><!-- /.property -->
                     </div><!-- /.col-md-3 -->
                 </div><!-- /.row-->
@@ -362,7 +289,7 @@
         </section><!-- /#price-drop -->
         <aside id="advertising" class="block">
             <div class="container">
-                <a href="submit.html">
+                <a onclick="location.href='./cadastrar'">
                     <div class="banner">
                         <div class="wrapper">
                             <span class="title">Quer ter sua igreja cadastrada aqui?</span>

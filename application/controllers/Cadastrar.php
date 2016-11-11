@@ -120,21 +120,19 @@
         
     }
     
-    public function alterar_cadastro($id) {
-        if(null != $this->session->userdata('logado')){
-            $this->db->where(md5('id'), $id);
+    public function editar_cadastro($id) {
+        if(null == $this->session->userdata('logado')){
+            $this->load->model('igrejas_model', 'igrejas');
             $this->db->where('id', $this->session->userdata('igrejas')->id);
-            $this->db->where('ativar',1);
-            $this->db->get('igrejas')->result();
-                if(count(['igrejas'])== 1){
-                    $this->load->view('cadastro');
-                }
-                else {
+            $data['cadastro'] = $this->igrejas->alterar_cadastro($id);
+            $this->load->view("cadastro", $data);
+        }    
+            else {
                     redirect (base_url("login"));
-                }
         }
-        
     }
+        
+    
     
     function salvar_alteracao_cadastro() {
         if(null != $this->session->userdata('logado')){

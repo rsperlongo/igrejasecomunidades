@@ -224,8 +224,8 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                             "</div>" .
                                             "<div class='col-md-8 col-sm-8'>" .
                                                 "<div class='form-group'>" . 
-                                                  //  form_hidden('id', md5($igrejas[0]->id)) .
-                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao_ID', 'value'=> set_value('denominacao_ID'))) . 
+                                                    form_hidden('id', md5($cadastro->id)) .
+                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao_ID', 'value'=> $cadastro->denominacao)) . 
                                                 "</div>" .    
                                              "</div>" .
                                              "</div>" .

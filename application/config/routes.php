@@ -57,10 +57,12 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = "cadastrar/login";
 $route['logout'] = "cadastrar/logout";
 $route['cadastro'] = "cadastrar/cadastro";
+$route['alterar-cadastro'] = "cadastrar/alterar-cadastro";
 $route['agenda'] = "cadastrar/agenda";
 $route['alterar-plano'] = "cadastrar/alterarPlano";
 $route['alterar-foto'] = "cadastrar/alterarFoto";
 $route['cadastro-pastores'] = "cadastrar/cadastroPastores";
+
 $route['busca'] = 'home/busca';
 $route['eventos'] = 'home/eventos';
 

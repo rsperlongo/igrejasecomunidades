@@ -240,8 +240,8 @@
                             foreach ($eventos as $evento) {
                                 $contador++;
                             echo "div class='property-imagem'" ; 
-                                 if(is_file("assets/img/eventos/". md5($evento->id).".png")){
-                                     echo img(is_file("assets/img/eventos". md5($evento->id).".png"));
+                                 if(is_file("assets/img/eventos/". ($evento->id).".png")){
+                                     echo img(is_file("assets/img/eventos". ($evento->id).".png"));
                                  }
                                  "</div>";
                             }

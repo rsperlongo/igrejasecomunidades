@@ -6,8 +6,8 @@
      }
      
      public function listar_evento() {
-         $this->db->select("(SELECT count(*) FROM agenda WHERE evento, descricao_evento, data_evento");
-         $this->db->from('agenda');
+         $this->db->query("(SELECT count(*) FROM agenda as igrejas_ID WHERE evento, descricao_evento, data_evento");
+         $this->db->select('agenda');
          return $this->db->result();
      }
      

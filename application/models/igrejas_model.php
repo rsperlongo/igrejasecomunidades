@@ -64,6 +64,15 @@ class Igrejas_model extends CI_Model {
 		$this->db->where('md5(id)',$this->input->post('id'));
 		return $this->db->update('igrejas',$dados);
 	}
+        
+        public function alterar_cadastro($id=NULL) {
+            if($id != NULL){
+                $this->db->where('id', $id);
+                $query = $this->db->get("igrejas");
+                return $query->row();
+                        
+            }
+        }
     
     
 }

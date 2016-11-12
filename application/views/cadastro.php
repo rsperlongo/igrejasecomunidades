@@ -206,8 +206,9 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                             </div>
                                            
                                         </section>
-                                 </form> -->        
-                                <?php
+                                 </form> -->   
+                                 <?php
+         
                                 
                                 echo validation_errors();
                                 echo form_open(base_url('cadastro/salvar_alteracao_cadastro'), array('id'=>'form_cadastro')) . 

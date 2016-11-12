@@ -4,13 +4,10 @@
 
      function __construct() {
          parent::__construct();
-         $this->load->model('igrejas_model');
-         $igrejas = $this->input->post('igrejas');
+
     }
     
     public function index() {
-      
-        
         $this->load->view('cadastrar');
         
     }
@@ -21,8 +18,9 @@
     }
     
     public function cadastro() {
-        
-        $this->load->view('cadastro');
+        $this->load->model('igrejas_model', 'igrejas');
+         $data['igrejas'] = $this->igrejas->getIgrejas(); 
+         $this->load->view('cadastro',$data);
     }
     
     public function agenda() {

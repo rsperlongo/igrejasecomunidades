@@ -207,9 +207,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                            
                                         </section>
                                  </form> -->   
-                                 <?php
-         
-                                
+                                 <?php 
                                 echo validation_errors();
                                 echo form_open(base_url('cadastro/salvar_alteracao_cadastro'), array('id'=>'form_cadastro')) . 
                                     "<div class='checkbox switch' id='agent-switch' data-agent-state='is-agent'>" . 
@@ -222,11 +220,10 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                             "<div id='the-basics'>" . 
                                                     form_label('Denominação','denominacao') . 
                                             "</div>" .
-                                            "</div>" .
                                             "<div class='col-md-8 col-sm-8'>" .
                                                 "<div class='form-group'>" . 
-                                                    form_hidden('id', md5($cadastro->id)) .
-                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao_ID', 'value'=> $cadastro->denominacao)) . 
+                                                    form_hidden('id', md5($igrejas->id)) .
+                                                    form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao', 'value'=> $igrejas->denominacao_ID)) . 
                                                 "</div>" .    
                                              "</div>" .
                                              "</div>" .
@@ -235,7 +232,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                         "<dl class='contact-fields'>" . 
                                         "<dt>" . form_label('Nome da Igreja','nome') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'nome','name'=>'nome','type'=>'text','value'=> set_value('nome'))) .
+                                                form_input(array('class'=>'form-control','id'=>'nome','name'=>'nome','type'=>'text','value'=> $igrejas->nome)) .
                                         
                                             "</div>" .
                                             "</dd>" . 

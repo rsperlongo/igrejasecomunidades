@@ -56,9 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 //área de igrejas - edição de cadastro
 $route['login'] = "cadastrar/login";
 $route['logout'] = "cadastrar/logout";
-$route['cadastro'] = "cadastrar/cadastro";
-
-$route['editar-cadastro/(:any)'] = "cadastrar/editar-cadastro/$1";
+$route['cadastro'] = "cadastrar/cadastro/$1";
 $route['agenda'] = "cadastrar/agenda";
 $route['alterar-plano'] = "cadastrar/alterarPlano";
 $route['alterar-foto'] = "cadastrar/alterarFoto";

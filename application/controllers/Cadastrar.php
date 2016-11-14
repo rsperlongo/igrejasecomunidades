@@ -17,9 +17,9 @@
         $this->load->view('login');
     }
     
-    public function cadastro() {
-        $this->load->model('igrejas_model', 'igrejas');
-         $data['igrejas'] = $this->igrejas->getIgrejas(); 
+    public function cadastro($id) {
+         $this->load->model('igrejas_model', 'igrejas');
+         $data['igrejas'] = $this->igrejas->getIgrejas($id); 
          $this->load->view('cadastro',$data);
     }
     

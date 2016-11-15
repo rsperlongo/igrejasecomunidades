@@ -4,7 +4,7 @@
 
      function __construct() {
          parent::__construct();
-
+         $this->load->model('igrejas_model', 'igrejas');
     }
     
     public function index() {
@@ -18,12 +18,25 @@
     }
     
     public function cadastro($id) {
-         $this->load->model('igrejas_model', 'igrejas');
+          if(null != $this->session->userdata('logado')){
+         //$this->db->where('md5(id)', $id);
+         $this->db->where('ativar',1);
+         $this->db->where('id', $this->session->userdata('igrejas')->id); 
          $data['igrejas'] = $this->igrejas->getIgrejas($id); 
-         $this->load->view('cadastro',$data);
+         
+            if(count($data['igrejas'])== 1){
+            $this->load->view('cadastro',$data);
+            }
+         }
+         else {
+             redirect("login");
+         }
+        
     }
     
-    public function agenda() {
+    public function agenda($id) {
+        $this->load->model('Igrejas_model', 'agenda');
+        $data['agenda'] = $this->agenda->getAgenda($id);
         $this->load->view('agenda');
     }
     

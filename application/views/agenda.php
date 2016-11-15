@@ -67,7 +67,7 @@
                                 </div>
                                     
                                 <div class="col-md-9 col-sm-9">
-                                    <form role="form" id="form-account-profile" method="post" >
+                                    <form role="form" id="form-account-profile" method="post" action="<?php base_url('cadastrar/alterar_agenda')?>" >
                                         <div class="checkbox switch" id="agent-switch" data-agent-state="is-agent">
                                             <label>
                                                 Ativo?<input type="checkbox">

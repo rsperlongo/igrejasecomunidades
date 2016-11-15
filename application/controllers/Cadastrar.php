@@ -18,16 +18,16 @@
     }
     
     public function cadastro($id) {
-          if(null != $this->session->userdata('logado')){
+         // if(null != $this->session->userdata('logado')){
          //$this->db->where('md5(id)', $id);
-         $this->db->where('ativar',1);
+         //$this->db->where('ativar',1);
          $this->db->where('id', $this->session->userdata('igrejas')->id); 
          $data['igrejas'] = $this->igrejas->getIgrejas($id); 
-         
+            
             if(count($data['igrejas'])== 1){
             $this->load->view('cadastro',$data);
             }
-         }
+          
          else {
              redirect("login");
          }
@@ -37,7 +37,7 @@
     public function agenda($id) {
         $this->load->model('Igrejas_model', 'agenda');
         $data['agenda'] = $this->agenda->getAgenda($id);
-        $this->load->view('agenda');
+        $this->load->view('agenda', $data);
     }
     
     public function alterarPlano() {

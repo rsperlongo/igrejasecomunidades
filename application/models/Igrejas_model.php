@@ -64,9 +64,19 @@ class Igrejas_model extends CI_Model {
 		return $this->db->update('igrejas',$dados);
 	}
 
-        public function getIgrejas(){
+        public function getIgrejas($id = NULL){   
+            $this->db->where('ID', $id);
+            $this->db->limit(1);
             $query = $this->db->query("SELECT * from igrejas i JOIN denominacao d on i.denominacao_ID = d.ID JOIN cidades c on i.cidade_ID = c.ID");
             return $query->result();
+             
+
+        }
+        
+        public function efetuar_login($email, $senha) {
+            $this->db->where('email',$email);
+            $this->db->where('senha',$senha);
+            return $this->db->get('igrejas')->result();
         }
 
         public function getAgenda(){

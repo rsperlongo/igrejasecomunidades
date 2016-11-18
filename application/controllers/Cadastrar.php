@@ -5,6 +5,7 @@
      function __construct() {
          parent::__construct();
          $this->load->model('igrejas_model', 'igrejas');
+         $this->load->library('session');
     }
     
     public function index() {
@@ -12,8 +13,7 @@
         
     }
     
-    public function form_login() {
-        
+    public function Form_login() {
         $this->load->view('login');
     }
     
@@ -21,9 +21,9 @@
          // if(null != $this->session->userdata('logado')){
          //$this->db->where('md5(id)', $id);
          //$this->db->where('ativar',1);
-         $this->db->where('id', $this->session->userdata('igrejas')->id); 
+         if(NULL != $this->session->userdata('logado')){ 
          $data['igrejas'] = $this->igrejas->getIgrejas($id); 
-            
+         
             if(count($data['igrejas'])== 1){
             $this->load->view('cadastro',$data);
             }
@@ -31,7 +31,7 @@
          else {
              redirect("login");
          }
-        
+         }
     }
     
     public function agenda($id) {
@@ -52,7 +52,7 @@
         $this->load->view('cadastro-pastores');
     }
     
-    public function adicionar() {
+    public function Adicionar() {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('nome', 'Nome','required|min_length[5]');
         $this->form_validation->set_rules('email', 'E-mail', 'required|valid_email');
@@ -89,35 +89,27 @@
     }
     
     
-    public function login(){
+    public function Login(){
         $this->load->library('form_validation');        
         $this->form_validation->set_rules('email', 'E-mail', 'required|valid_email');
         $this->form_validation->set_rules('senha', 'Senha','required|min_length[5]');
         if ($this->form_validation->run() == FALSE){
-            $this->form_login();
+            $this->Form_login();
         }
         else{
-            $email = $this->input->post('email');
-            $senha = $this->input->post('senha');
-            
+           // $email = $this->input->post('email');
+           // $senha = $this->input->post('senha');
+          
             $this->db->where('email', $this->input->post('email'));
             $this->db->where('senha', $this->input->post('senha'));
             $data['igrejas']= $this->db->get('igrejas')->result();
             //$this->db->where('ativar',1);
-            //$cliente = $this->db->get('igrejas')->result();
-            //echo $this->db->last_query(); //Use a função $this->db->last_query() para verificar a última consulta executada.
-            //print_r($cliente);
-            //exit();      
-            if(count($data['igrejas'])==1){
-                $dados['nome'] = $data['igrejas'][0]->nome;
-                $dados['ID'] = $data['igrejas'][0]->id;
-                $dados['logado'] = TRUE;
-                $this->session->set_userdata($dados);
-                redirect(base_url('cadastro'));
-            }
-            else{
-                redirect(base_url("login"));
-            }
+            //$this->db->get('igrejas')->result();
+           // echo $this->db->last_query(); //Use a função $this->db->last_query() para verificar a última consulta executada.
+           // print_r($igrejas);
+           // exit(); 
+           $this->session->set_userdata($data); 
+           $this->load->view('cadastro');
             
         }
         

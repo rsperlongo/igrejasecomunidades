@@ -54,7 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 //área de igrejas - edição de cadastro
-$route['login'] = "cadastrar/login";
+$route['login'] = "cadastrar/form_login";
 $route['logout'] = "cadastrar/logout";
 $route['cadastro'] = "cadastrar/cadastro/$1";
 $route['agenda'] = "cadastrar/agenda/$1";

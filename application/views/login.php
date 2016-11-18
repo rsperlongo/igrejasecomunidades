@@ -15,19 +15,35 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2>Ja possui cadastro?</h2>
-                    <form role="form" id="form-create-account" method="post" >
+                    <?php
+                    echo validation_errors();
+                    echo form_open(base_url("cadastrar/login"), array('id'=>'form_login')) . 
+                         "<div class='form-group'>" . 
+                            form_label('email', 'Email') . 
+                            form_input(array('type'=>'email', 'id'=>'email', 'name'=>'email', 'class'=>'form-control', 'required')) . 
+                         "</div>" .
+                         "<div class='form-group'>"  . 
+                         form_label('senha', 'Senha') . 
+                         form_input(array('type'=>'password','id'=>'senha', 'name'=>'senha', 'class'=>'form-control', 'required')) . 
+                         "</div>" .   
+                         "<div class='form-group clearfix'>" .
+                            form_submit('LoginSubmit', 'Entrar em minha conta', "class='btn pull-right btn-default'") .
+                        "</div>" .
+                        form_close();    
+                    ?>
+                    <!--<form role="form" id="form-create-account" method="post">
                         <div class="form-group">
                             <label for="form-create-account-email">Email:</label>
                             <input type="email" name="email" id="email" class="form-control" id="form-create-account-email" required>
-                        </div><!-- /.form-group -->
+                        </div>
                         <div class="form-group">
                             <label for="form-create-account-password">Senha:</label>
                             <input type="password" name="senha" id="senha" class="form-control" id="form-create-account-password" required>
-                        </div><!-- /.form-group -->
+                        </div>
                         <div class="form-group clearfix">
                             <button type="submit" class="btn pull-right btn-default" id="account-submit">Entrar em minha conta</button>
-                        </div><!-- /.form-group -->
-                    </form>
+                        </div>
+                    </form> -->
                     <hr>
                     <div class="center"><a href="#">Esqueci minha senha!</a></div>
                 </div>

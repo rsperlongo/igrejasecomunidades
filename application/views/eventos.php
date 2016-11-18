@@ -23,7 +23,7 @@
                         <div class="agency">
                             <a href="agency-detail.html" class="agency-image"><img alt="" src="assets/img/IPB-logo1.png"></a>
                             <div class="wrapper">
-                                <header><a href="#"><h2>(20/07/2015) INTERLESTE 2015</h2></a></header>
+                                <header><a href="#"><h2><?php echo $evento->data ?></h2></a></header>
                                 
                                 <h3><strong>IGREJA:&nbsp;<a href="#">IGREJA BATISTA VILA SALETE / CÓD. 22835</a></strong></h3>
                                     <br>
@@ -31,61 +31,7 @@
                                 
                             </div>
                         </div><!-- /.agency -->
-                        <div class="agency">
-                            <a href="agency-detail.html" class="agency-image"><img alt="" src="assets/img/IPB-logo1.png"></a>
-                            <div class="wrapper">
-                                <header><a href="perfil.php"><h2>(20/07/2015) INTERLESTE 2015</h2></a></header>
-                                
-                                <h3><strong>IGREJA:&nbsp;<a href="#">IGREJA BATISTA VILA SALETE / CÓD. 22835</a></strong></h3>
-                                    <br>
-                                    <a class="btn icon-btn btn-info" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-primary"></span>Mais Informações</a>
-                                
-                            </div>
-                        </div><!-- /.agency -->
-                        <div class="agency">
-                            <a href="perfil.php" class="agency-image"><img alt="" src="assets/img/IPB-logo1.png"></a>
-                            <div class="wrapper">
-                                <header><a href="#"><h2>(20/07/2015) INTERLESTE 2015</h2></a></header>
-                                
-                                <h3><strong>IGREJA:&nbsp;<a href="#">IGREJA BATISTA VILA SALETE / CÓD. 22835</a></strong></h3>
-                                    <br>
-                                    <a class="btn icon-btn btn-info" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-primary"></span>Mais Informações</a>
-                                
-                            </div>
-                        </div><!-- /.agency -->
-                       <div class="agency">
-                            <a href="perfil.php" class="agency-image"><img alt="" src="assets/img/IPB-logo1.png"></a>
-                            <div class="wrapper">
-                                <header><a href="#"><h2>(20/07/2015) INTERLESTE 2015</h2></a></header>
-                                
-                                <h3><strong>IGREJA:&nbsp;<a href="#">IGREJA BATISTA VILA SALETE / CÓD. 22835</a></strong></h3>
-                                    <br>
-                                    <a class="btn icon-btn btn-info" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-primary"></span>Mais Informações</a>
-                                
-                            </div>
-                        </div><!-- /.agency -->
-                       <div class="agency">
-                            <a href="perfil.php" class="agency-image"><img alt="" src="assets/img/IPB-logo1.png"></a>
-                            <div class="wrapper">
-                                <header><a href="#"><h2>(20/07/2015) INTERLESTE 2015</h2></a></header>
-                                
-                                <h3><strong>IGREJA:&nbsp;<a href="#">IGREJA BATISTA VILA SALETE / CÓD. 22835</a></strong></h3>
-                                    <br>
-                                    <a class="btn icon-btn btn-info" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-primary"></span>Mais Informações</a>
-                                
-                            </div>
-                        </div><!-- /.agency -->
-                       <div class="agency">
-                            <a href="perfil.php" class="agency-image"><img alt="" src="assets/img/IPB-logo1.png"></a>
-                            <div class="wrapper">
-                                <header><a href="#"><h2>(20/07/2015) INTERLESTE 2015</h2></a></header>
-                                
-                                <h3><strong>IGREJA:&nbsp;<a href="#">IGREJA BATISTA VILA SALETE / CÓD. 22835</a></strong></h3>
-                                    <br>
-                                    <a class="btn icon-btn btn-info" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-primary"></span>Mais Informações</a>
-                                
-                            </div>
-                        </div><!-- /.agency -->
+                        
                         <!-- Pagination -->
                         <div class="center">
                             <ul class="pagination">

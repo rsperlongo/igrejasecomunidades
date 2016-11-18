@@ -64,6 +64,7 @@ $route['cadastro-pastores'] = "cadastrar/cadastroPastores";
 
 $route['busca'] = 'home/busca';
 $route['eventos'] = 'home/eventos';
+$route['detalhes-eventos'] = 'eventos/detalhes-eventos';
 
 $route['lista-igrejas'] = "home/lista-igrejas";
 

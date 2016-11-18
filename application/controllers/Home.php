@@ -22,6 +22,8 @@ class Home extends CI_Controller {
             
         }
         
+       
+        
         public function destaques_eventos($eventos) {
         $data_pagina['eventos'] = $this->eventos_model->destaques_eventos($eventos); 
         $this->load->view('eventos', $data_pagina);

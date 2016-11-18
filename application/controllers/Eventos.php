@@ -8,7 +8,6 @@
     }
     
     public function index() {
-        
         $data['eventos'] = $this->eventos->listar_eventos(); 
         $this->load->view('eventos', $data);
     }

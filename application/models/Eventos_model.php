@@ -7,9 +7,11 @@
      }
      
      public function get_eventos($id = NULL) {
+         if($id != NULL){
          $this->db->where('id', $id);
          $query = $this->db->query("select * from agenda a JOIN igrejas i on igreja_ID = a.ID");
          return $query->result();
+         }
      }
      
      public function destaques_home($quantos = 4){

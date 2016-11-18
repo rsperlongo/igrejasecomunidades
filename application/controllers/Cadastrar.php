@@ -17,18 +17,19 @@
         $this->load->view('login');
     }
     
-    public function cadastro($id=NULL) {
-          if(null != $this->session->userdata('logado')){
+    public function cadastro($id = NULL) {
+        
+         if(null != $this->session->userdata('logado')){
          $this->db->where('md5(id)', $id);
-         //$this->db->where('ativar',1);
-         //if(NULL != $this->session->userdata('logado')){ 
+         $this->db->where('ativar',1);
+         if(NULL != $this->session->userdata('logado')){ 
          $data['igrejas'] = $this->igrejas->getIgrejas(); 
          $this->load->view('cadastro',$data);
             }
           
          else {
              redirect("login");
-         
+           }
          }
     }
     
@@ -95,8 +96,8 @@
             $this->Form_login();
         }
         else{
-           // $email = $this->input->post('email');
-           // $senha = $this->input->post('senha');
+            //$email = $this->input->post('email');
+            //$senha = $this->input->post('senha');
           
             $this->db->where('email', $this->input->post('email'));
             $this->db->where('senha', $this->input->post('senha'));

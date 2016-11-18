@@ -24,10 +24,11 @@ class Home extends CI_Controller {
         }
         
         public function eventos($id = NULL) {
+            if($id == NULL){
             $this->db->where($id, 'ID');
-            $data['eventos'] = $this->eventos->get_eventos(); 
+            $data['eventos'] = $this->eventos->get_eventos($id); 
             $this->load->view('eventos', $data);
-            
+            }
         }
         
         public function destaques_eventos($eventos) {

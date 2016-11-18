@@ -17,20 +17,18 @@
         $this->load->view('login');
     }
     
-    public function cadastro($id) {
-         // if(null != $this->session->userdata('logado')){
-         //$this->db->where('md5(id)', $id);
+    public function cadastro($id=NULL) {
+          if(null != $this->session->userdata('logado')){
+         $this->db->where('md5(id)', $id);
          //$this->db->where('ativar',1);
-         if(NULL != $this->session->userdata('logado')){ 
-         $data['igrejas'] = $this->igrejas->getIgrejas($id); 
-         
-            if(count($data['igrejas'])== 1){
-            $this->load->view('cadastro',$data);
+         //if(NULL != $this->session->userdata('logado')){ 
+         $data['igrejas'] = $this->igrejas->getIgrejas(); 
+         $this->load->view('cadastro',$data);
             }
           
          else {
              redirect("login");
-         }
+         
          }
     }
     
@@ -102,14 +100,24 @@
           
             $this->db->where('email', $this->input->post('email'));
             $this->db->where('senha', $this->input->post('senha'));
-            $data['igrejas']= $this->db->get('igrejas')->result();
-            //$this->db->where('ativar',1);
+            $igrejas = $this->db->get('igrejas')->result();
+            $this->db->where('ativar',1);
             //$this->db->get('igrejas')->result();
            // echo $this->db->last_query(); //Use a função $this->db->last_query() para verificar a última consulta executada.
-           // print_r($igrejas);
-           // exit(); 
-           $this->session->set_userdata($data); 
-           $this->load->view('cadastro');
+            //print_r($igrejas);
+            //exit(); 
+           if(count($igrejas)==1){
+                $dadosSessao['igrejas'] = $igrejas[0];
+                $dadosSessao['logado'] = TRUE;
+                $this->session->set_userdata($dadosSessao);
+                redirect(base_url("cadastro"));
+            }
+            else{
+                $dadosSessao['igrejas'] = NULL;
+                $dadosSessao['logado'] = FALSE;
+                $this->session->set_userdata($dadosSessao);
+                redirect(base_url("login"));
+            }
             
         }
         

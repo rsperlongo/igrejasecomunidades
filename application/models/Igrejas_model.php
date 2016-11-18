@@ -65,11 +65,12 @@ class Igrejas_model extends CI_Model {
 	}
 
         public function getIgrejas($id = NULL){   
-            $this->db->where('ID', $id);
+            if($id != NULL){
+            $this->db->where('id', $id);    
             $this->db->limit(1);
             $query = $this->db->query("SELECT * from igrejas i JOIN denominacao d on i.denominacao_ID = d.ID JOIN cidades c on i.cidade_ID = c.ID");
             return $query->result();
-             
+            }
 
         }
         

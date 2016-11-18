@@ -6,9 +6,9 @@
          $this->load->model('Igrejas_model', 'igrejas');
      }
      
-     public function listar_evento($id = NULL) {
-         $this->db->where('ID', $id);
-         $query = $this->db->query("(SELECT count(*) FROM agenda as igrejas_ID WHERE evento, descricao_evento, data_evento, foto");
+     public function get_eventos($id = NULL) {
+         $this->db->where('id', $id);
+         $query = $this->db->query("select * from agenda a JOIN igrejas i on igreja_ID = a.ID");
          return $query->result();
      }
      

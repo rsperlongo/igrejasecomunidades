@@ -207,7 +207,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                            
                                         </section>
                                  </form> -->  
-                                    
+                                   
                                  <?php 
                                 echo validation_errors();
                                 echo form_open(base_url('cadastro/salvar_alteracao_cadastro'), array('id'=>'form_cadastro')) . 
@@ -223,7 +223,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                             "</div>" .
                                             "<div class='col-md-8 col-sm-8'>" .
                                                 "<div class='form-group'>" . 
-                                                    //form_hidden('id', md5($igrejas[0]->id)) .
+                                                   // form_hidden('id', md5($igrejas[0]->id)) .
                                                     form_input(array('class'=>'typeahead','id'=>'denominacao','name'=>'denominacao', 'value'=> $igrejas[0]->denominacao)) . 
                                                 "</div>" .    
                                              "</div>" .
@@ -233,7 +233,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                         "<dl class='contact-fields'>" . 
                                         "<dt>" . form_label('Nome da Igreja','nome') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'nome','name'=>'nome','type'=>'text','value'=> $igrejas[0]->nome_igrejas)) .
+                                                form_input(array('class'=>'form-control','id'=>'nome_igrejas','name'=>'nome_igrejas','type'=>'text','value'=> $igrejas[0]->nome_igrejas)) .
                                         
                                             "</div>" .
                                             "</dd>" . 
@@ -269,7 +269,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                             "</dd>" . 
                                         "<dt>" . form_label('Telefones','telefones') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
-                                                form_input(array('class'=>'form-control','id'=>'telefones','name'=>'telefones','type'=>'text','value'=> $igrejas[0]->telefones)) .
+                                                form_input(array('class'=>'form-control','id'=>'telefones','name'=>'telefones','type'=>'text','value'=> $igrejas[1]->telefones)) .
                                         
                                             "</div>" .
                                             "</dd>" . 

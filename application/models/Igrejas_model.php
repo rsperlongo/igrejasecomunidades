@@ -73,6 +73,8 @@ class Igrejas_model extends CI_Model {
             $query = $this->db->get("agenda");
             return $query->result();
         }
+        
+        
     
     
 }

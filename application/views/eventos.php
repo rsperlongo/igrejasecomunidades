@@ -23,7 +23,7 @@
                         <div class="agency">
                             <a href="agency-detail.html" class="agency-image"><img alt="" src="assets/img/IPB-logo1.png"></a>
                             <div class="wrapper">
-                                <header><a href="#"><h2><?php echo $eventos[0]->data_evento ?></h2></a></header>
+                                <header><a href="#"><h2><?php echo $eventos->data_evento ?></h2></a></header>
                                 
                                 
                                 <h3><strong>IGREJA:&nbsp;<a href="#">IGREJA BATISTA VILA SALETE / CÓD. 22835</a></strong></h3>

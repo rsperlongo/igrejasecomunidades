@@ -210,7 +210,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                    
                                  <?php 
                                 echo validation_errors();
-                                echo form_open(base_url('cadastro/salvar_alteracao_cadastro'), array('id'=>'form_cadastro')) . 
+                                echo form_open(base_url('cadastrar/cadastro/$1'), array('id'=>'form_cadastro')) . 
                                     "<div class='checkbox switch' id='agent-switch' data-agent-state='is-agent'>" . 
                                            
                                         "</div>" . 
@@ -231,7 +231,7 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                            "</section>" .
                                         "<section id='contact'>" .
                                         "<dl class='contact-fields'>" . 
-                                        "<dt>" . form_label('Nome da Igreja','nome') . "</dt>" .
+                                        "<dt>" . form_label('Nome da Igreja','nome_igrejas') . "</dt>" .
                                             "<dd><div class='form-group'>" . 
                                                 form_input(array('class'=>'form-control','id'=>'nome_igrejas','name'=>'nome_igrejas','type'=>'text','value'=> $igrejas[0]->nome_igrejas)) .
                                         

@@ -5,7 +5,7 @@
      function __construct() {
          parent::__construct();
          $this->load->model('Igrejas_model', 'igrejas');
-         $this->load->library('session');
+         
     }
     
     public function index() {
@@ -19,7 +19,7 @@
     
     public function cadastro($id = NULL) {
          if(null != $this->session->userdata('logado')){
-         $this->db->where('md5(id)', $id);
+         $this->db->where('ID', $id);
          $this->db->where('ativar',1);
         // if(NULL != $this->session->userdata('logado')){ 
          $data['igrejas'] = $this->igrejas->getIgrejas(); 
@@ -102,6 +102,7 @@
             $this->db->where('senha', $this->input->post('senha'));
             $igrejas = $this->db->get('igrejas')->result();
             $this->db->where('ativar',1);
+            
             //$this->db->get('igrejas')->result();
            // echo $this->db->last_query(); //Use a função $this->db->last_query() para verificar a última consulta executada.
             //print_r($igrejas);

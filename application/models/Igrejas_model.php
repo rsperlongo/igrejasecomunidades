@@ -18,9 +18,9 @@ class Igrejas_model extends CI_Model {
             return $this->db->count_all('igrejas');
 	}
     
-    public function editar($igrejas){
+    public function editar($id = NULL){
                 $this->db->where('id',$id);
-		$this->db->where('md5(id)',$igrejas);
+		$this->db->where('md5','id',$id);
 		return $this->db->get('igrejas')->result();
 	}
     
@@ -65,16 +65,16 @@ class Igrejas_model extends CI_Model {
 	}
 
         public function getIgrejas($id = NULL){   
-            if($id != NULL){
             $this->db->where('id', $id);    
             $this->db->limit(1);
             $query = $this->db->query("SELECT * from igrejas i JOIN denominacao d on i.denominacao_ID = d.ID JOIN cidades c on i.cidade_ID = c.ID");
             return $query->result();
-            }
+         
 
         }
         
         public function efetuar_login($email, $senha) {
+            $this->db->from('igrejas');
             $this->db->where('email',$email);
             $this->db->where('senha',$senha);
             return $this->db->get('igrejas')->result();
